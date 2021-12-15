@@ -1,14 +1,14 @@
 <template>
-  <section id="app" class="app">
+  <section class="index">
     <router-view/>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Index'
 }
 </script>
 
-<style lang="scss" scopen>
+<style lang="scss" scoped>
 </style>

@@ -7,3 +7,5 @@ const i18n = new VueI18n({
   locale: 'en',
   fallbackLocale: 'ru'
 })
+
+export default i18n

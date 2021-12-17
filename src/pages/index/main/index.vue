@@ -1,20 +1,24 @@
 <template>
   <section class="main">
-    <Btn>
-      Lorem
+    <Btn white>
+      Click Me
     </Btn>
+    <Checkbox>
+      Жопа
+    </Checkbox>
   </section>
 </template>
 
 <script>
-import Btn from '@/components/RefBtn.vue'
+import Btn from '@/components/form/RefBtn.vue'
+import Checkbox from '@/components/form/RefCheckbox.vue'
 
 export default {
   name: 'Main',
-  components: {Btn}
+  components: {Btn, Checkbox},
+  methods: {}
 }
 </script>
 
 <style lang="scss" scoped>
-
 </style>

@@ -1,9 +1,10 @@
 $white-color: #fff;
-$grey-color: #808080;
+$grey-color: #C4C4C4;
+$dark-grey-color: #808080;
 $dark-color: #383838;
 $black-color: #111111;
 $blue-color: #477BDF;
-
+$blue-active-color: #5f8ee7;
 
 %h3 {
   font-family: 'Rubik', sans-serif;
@@ -11,6 +12,14 @@ $blue-color: #477BDF;
   font-weight: 500;
   font-size: 36px;
   line-height: 150%;
+  color: $black-color;
+}
+
+%btn {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
   color: $black-color;
 }
 
@@ -45,7 +54,7 @@ $blue-color: #477BDF;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16x;
+  font-size: 16px;
   line-height: 150%;
   color: $white-color;
 }

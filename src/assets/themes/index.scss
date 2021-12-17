@@ -1,0 +1,51 @@
+$white-color: #fff;
+$grey-color: #808080;
+$dark-color: #383838;
+$black-color: #111111;
+$blue-color: #477BDF;
+
+
+%h3 {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 150%;
+  color: $black-color;
+}
+
+%h4 {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: $white-color;
+}
+
+%p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: $white-color;
+}
+
+%p-big {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: $white-color;
+}
+
+%p-small {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16x;
+  line-height: 150%;
+  color: $white-color;
+}

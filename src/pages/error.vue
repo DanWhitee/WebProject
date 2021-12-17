@@ -1,6 +1,5 @@
 <template>
   <section class="error">
-    <p>Lorem</p>
   </section>
 </template>
 

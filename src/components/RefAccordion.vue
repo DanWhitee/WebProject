@@ -19,7 +19,10 @@
       @before-leave="start"
       @after-leave="end"
     >
-      <div v-show="isOpen" class="accordion__content">
+      <div
+        v-show="isOpen"
+        :class="desktop ? 'accordion__content desktop' : 'accordion__content'"
+      >
         <div class="accordion__content__inner">
           <slot />
         </div>
@@ -45,6 +48,13 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    /**
+     * Тип устройства
+     */
+    desktop: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -76,77 +86,76 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .accordion__item {
-    border-radius: 10px;
-    background-color: #fff;
-  }
+.main {
+  position: relative;
+}
 
-  .accordion__item.inner + .accordion__item.inner {
-    margin-top: 14px;
-  }
-
-  .accordion__item.main + .accordion__item.main {
-    border-top: 0;
-  }
-
-  .header {
-    cursor: pointer;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    padding: 24px;
-    border-radius: 10px;
-    background-color: #fff;
-  }
-
-  .header__wrapepr {
-    display: flex;
-    align-items: center;
-  }
-
-  .title {
-    flex: 1;
-    color: #000;
-    line-height: 112%;
-  }
-
-  .title.inner {
-    font-size: 10px;
-    line-height: 139.9%;
-    text-transform: uppercase;
-  }
-
-  .arrow {
-    flex: 0;
-  }
-
-  .arrow.up {
-    transform: rotate(180deg) translateY(-1px);
-  }
-
+// Desktop версия аккордеон
+.accordion__content.desktop {
+  position: absolute;
+  top: 35px;
+  left: -10px;
+  box-shadow: 0px 12px 30px -5px rgba(40, 43, 99, 0.08);
   .accordion__content__inner {
-    padding: 24px;
-    background-color: #fff;
-    border-top: 1px solid #ebebeb;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 210px;
   }
+}
+// Modile версия аккордеон
+.accordion__content__inner {
+  background: #FFFFFF;
+}
 
-  .accordion-enter-active,
-  .accordion-leave-active {
-    will-change: height;
-    transition: height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
-    overflow: hidden;
-  }
+.accordion__item.inner + .accordion__item.inner {
+  margin-top: 14px;
+}
 
-  .accordion-enter,
-  .accordion-leave-to {
-    height: 0 !important;
-  }
+.header {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
 
-  @media all and (max-width: 720px) {
-    .accordion__content__inner {
-      padding: 24px 14px;
-    }
-  }
+.header__wrapepr {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  flex: 1;
+  background-color: transparent;
+  color: $black-color;
+  @extend %p-big;
+}
+
+.title.inner {
+  font-size: 10px;
+  line-height: 139.9%;
+  text-transform: uppercase;
+}
+
+.arrow {
+  flex: 0;
+  margin-left: 10px;
+  transition: transform .3s;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.accordion-enter-active,
+.accordion-leave-active {
+  will-change: height;
+  transition: height 0.6s cubic-bezier(0.25, 0.8, 0.5, 1);
+  overflow: hidden;
+}
+
+.accordion-enter,
+.accordion-leave-to {
+  height: 0 !important;
+}
 </style>

@@ -1,11 +1,14 @@
+// Color
 $white-color: #fff;
 $grey-color: #C4C4C4;
 $dark-grey-color: #808080;
+$opacity-grey-color: #BABABA;
 $dark-color: #383838;
 $black-color: #111111;
 $blue-color: #477BDF;
 $blue-active-color: #5f8ee7;
 
+// Default-style
 %h3 {
   font-family: 'Rubik', sans-serif;
   font-style: normal;
@@ -13,6 +16,15 @@ $blue-active-color: #5f8ee7;
   font-size: 36px;
   line-height: 150%;
   color: $black-color;
+}
+
+%h5 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $opacity-grey-color;
 }
 
 %btn {
@@ -58,3 +70,11 @@ $blue-active-color: #5f8ee7;
   line-height: 150%;
   color: $white-color;
 }
+
+// Default size media width
+
+$extra-large: 1140px;
+$large: 960px;
+$medium: 768px;
+$small: 576px;
+$extra-small: 480px;

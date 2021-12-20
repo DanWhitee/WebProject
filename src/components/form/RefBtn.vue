@@ -4,7 +4,8 @@
     class="btn"
     :class="{
       'btn--blue': blue === true,
-      'btn--white': white === true
+      'btn--white': white === true,
+      'btn--transparent': transparent === true
     }"
     :disabled="disabled"
     @click="$emit('click')"
@@ -32,8 +33,15 @@ export default {
       default: false
     },
     /*
-    *  disabled btn
+    *  transparent style btn
     */
+    transparent: {
+      type: Boolean,
+      default: false
+    },
+    /*
+    *  disabled btn
+    */    
     disabled: {
       type: Boolean,
       default: false
@@ -76,6 +84,30 @@ export default {
   &--white {
     color: $blue-color;
     background: $white-color;
+    border-radius: 5px;
+    @extend %btn;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $blue-color;
+        color: $white-color;
+      }
+    }
+
+    &:active {
+      background: $white-color;
+      color: $blue-active-color;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+  &--transparent {
+    color: $blue-color;
+    background-color: transparent;
     border-radius: 5px;
     @extend %btn;
 

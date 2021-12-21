@@ -1,11 +1,11 @@
 <template>
   <nav :class="desktop ? 'nav' : 'nav mobile'">
-    <router-link :to="{name: 'home'}" class="rout nav__link">Ray</router-link>
-    <router-link :to="{name: 'home'}" class="rout nav__link">Databases</router-link>
+    <router-link @click="activeClass" :to="{name: 'ray'}" class="rout nav__link">Ray</router-link>
+    <router-link :to="{name: 'databases'}" class="rout nav__link">Databases</router-link>
     <Accordion class="nav__accordion" :title="'DOCUMENTATION'" :desktop="desktop">
       <div class="nav__accordion-wrapper">
-        <router-link :to="{name: 'home'}" class="rout nav__accordion-text">Ray: Get Started</router-link>
-        <router-link :to="{name: 'home'}" class="rout nav__accordion-text">Databases: Get Started</router-link>
+        <router-link :to="{name: 'ray'}" class="rout nav__accordion-text">Ray: Get Started</router-link>
+        <router-link :to="{name: 'databases'}" class="rout nav__accordion-text">Databases: Get Started</router-link>
       </div>
     </Accordion>
   </nav>
@@ -21,6 +21,13 @@ export default {
     desktop: {
       type: Boolean,
       default: true
+    }
+  },
+  methods: {
+    // activeClass (url) {
+    //   console.log(this.$route.path.indexOf(url))
+    // }
+    activeClass () {
     }
   }
 }

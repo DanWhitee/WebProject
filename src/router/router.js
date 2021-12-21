@@ -3,8 +3,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '@/pages/index/main/index.vue'),
+    name: 'main',
+    component: () => import('@/pages/index/main'),
+  },
+  {
+    path: '/databases',
+    name: 'databases',
+    component: () => import('@/pages/index/databases'),
+  },
+  {
+    path: '/ray',
+    name: 'ray',
+    component: () => import('@/pages/index/ray'),
   }
 ]
 

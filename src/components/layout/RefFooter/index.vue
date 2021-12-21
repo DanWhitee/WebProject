@@ -1,16 +1,13 @@
 <template>
   <footer class="footer">
-
     <div class="container">
       <div class="footer__body grid--layout">
-        
         <div class="left grid">
           <img class="left__logo" src="@/assets/images/landing-page/footer/footer-logo.svg" alt="logo">
           <h4 class="left__text desctop"> 
             Copyright © 2021 Refracto Inc. All Rights Reserved.
           </h4>
         </div>
-
         <template
           v-for="(item, index) in listInfo"
           :key="index"
@@ -23,21 +20,17 @@
             :bottom='item.bottom'
           />          
         </template>
-        
         <List class="networks grid" :title="'contact us'">
           <h5 class="networks__title">
             support@refracto.org
           </h5>
           <Networks class="networks__wrapper"/>
         </List>
-
-          <h4 class="left__text mobile grid"> 
-            Copyright © 2021 Refracto Inc. All Rights Reserved.
-          </h4>
-
+        <h4 class="left__text mobile grid"> 
+          Copyright © 2021 Refracto Inc. All Rights Reserved.
+        </h4>
       </div>
     </div>
-
   </footer>
 </template>
 
@@ -73,8 +66,11 @@ export default {
 .footer {
   padding: 130px 0;
   background-color: $black-color;
-}
 
+  @media screen and (max-width: $extra-small) {
+    padding: 50px 0;
+  }
+}
 .grid--layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -110,7 +106,6 @@ export default {
     }
   }
 }
-
 .left {
   &__text {
     @extend %p-small;
@@ -125,14 +120,11 @@ export default {
     display: none;
   }
 }
-
 .mobile {
   @media screen and (min-width: $extra-small) {
     display: none;
   }
 }
-
-
 .footer__text {
   @extend %p-small;
   text-transform: uppercase;
@@ -140,7 +132,6 @@ export default {
   margin-top: 60px;
   max-width: 230px;
 }
-
 .networks {
   &__title {
     @extend %p-big;

@@ -6,9 +6,19 @@ $opacity-grey-color: #BABABA;
 $dark-color: #383838;
 $black-color: #111111;
 $blue-color: #477BDF;
+$light-blue-color: #BCCFFF;
 $blue-active-color: #5f8ee7;
 
 // Default-style
+%h2 {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 150%;
+  color: $black-color;
+}
+
 %h3 {
   font-family: 'Rubik', sans-serif;
   font-style: normal;
@@ -44,6 +54,15 @@ $blue-active-color: #5f8ee7;
   color: $white-color;
 }
 
+%h5 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+  color: $white-color;
+}
+
 %p {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -71,8 +90,18 @@ $blue-active-color: #5f8ee7;
   color: $white-color;
 }
 
+%p-rare {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 150%;
+  color: $white-color;
+}
+
 // Default size media width
 
+$extra-large-max: 1200px;
 $extra-large: 1140px;
 $large: 960px;
 $medium: 768px;

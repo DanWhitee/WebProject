@@ -28,9 +28,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scopen>
-.app {
-  background-color: rgb(66, 36, 36);
-  height: 100vh;
-}
-</style>
+<style lang="scss" scopen />

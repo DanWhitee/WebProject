@@ -5,7 +5,8 @@
       :text="'On Refracto Platform, developers deploy their applications in Ray, and also use Databases as remote databases.'"
     />
     <Parallax />
-    <img class="img" src="@/assets/images/landing-page/main/bg.svg" alt="#">
+    <img
+      class="img" src="@/assets/images/landing-page/main/bg.svg" alt="#">
   </Banner>
 </template>
 
@@ -27,5 +28,16 @@ export default {
     display: block;
     transform: translate(-200px);
   }
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+
+.enter {
+  opacity: 0;
+  transform: translateY(0px);
 }
 </style>

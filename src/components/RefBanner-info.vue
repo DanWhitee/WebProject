@@ -1,5 +1,9 @@
 <template>
-  <div class="info">
+  <div
+    data-aos="fade-right"
+    data-aos-duration="2500"
+    class="info slideInUp"
+  >
     <h2 class="info__title">
       {{title}}
     </h2>
@@ -79,5 +83,16 @@ export default {
       max-width: 100%;
     }
   }
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0px);
 }
 </style>

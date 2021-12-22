@@ -1,6 +1,6 @@
 <template>
   <section id="app" class="app">
-    <Header 
+    <Header
       @open="activeSidebar = true"
     />
     <Sidebar
@@ -8,7 +8,7 @@
       :active="activeSidebar"
     />
     <router-view/>
-    <Footer />
+    <Footer/>
   </section>
 </template>
 
@@ -17,6 +17,9 @@ import Header from '@/components/layout/RefHeader'
 import Sidebar from '@/components/layout/RefSidebar'
 import Footer from '@/components/layout/RefFooter'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
   name: 'App',
   components: { Header, Sidebar, Footer},
@@ -24,8 +27,11 @@ export default {
     return {
       activeSidebar: false
     }
+  },
+  created () {
+    AOS.init()
   }
 }
 </script>
 
-<style lang="scss" scopen />
+<style lang="scss" scoped />

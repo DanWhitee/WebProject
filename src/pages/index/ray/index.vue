@@ -1,6 +1,5 @@
 <template>
   <section class="ray">
-    <p>Lorem</p>
   </section>
 </template>
 

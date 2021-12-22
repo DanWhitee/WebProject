@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "bowser": "^2.11.0",
     "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
     "parallax-js": "^3.1.0",
-    "v-wow": "git+https://github.com/guisoares2011/vue-wow.git",
     "vue": "^3.0.0",
     "vue-i18n": "^8.26.7",
     "vue-router": "^4.0.0-0",
@@ -30,6 +30,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "wowjs": "^1.1.3"
   }
 }

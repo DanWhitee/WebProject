@@ -1,5 +1,8 @@
 <template>
-  <header class="header">
+  <header
+    data-aos="fade-down"
+    class="header"
+  >
     <div class="container">
 
       <div class="header__body">
